@@ -2,7 +2,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"],
  function (Controller) {
 
   return Controller.extend("gsk.list.mylist.controller.Detail", {
-
+    // Oninit method for detail controller
     onInit: function () {
       debugger;
       var oRouter = this.getOwnerComponent().getRouter();
