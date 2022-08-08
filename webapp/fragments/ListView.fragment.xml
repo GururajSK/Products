@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+            <List id="list"
+                    items="{
+                        path: 'mHeader>/ProductCollection',
+                        sorter: [{
+                            path: 'SupplierName',
+                            group: true
+                        }],
+                        filters: [{path: 'Name', operator: 'Contains', value1: 'Note'},
+                                  {path: 'Quantity', operator: 'GE', value1: '15'}  ]
+                    }" 
+             >
+            <headerToolbar>
+                <OverflowToolbar id="oftb">
+                    <Title id="idTitle" class="TitleCss sapUiLargeMarginBegin" text="{path: 'mHeader>/ProductCollection', formatter: '.ListCount'}"/>
+                </OverflowToolbar>
+            </headerToolbar>
+            <ObjectListItem
+                id="idoli"
+                type="Active"
+                press="onSelectProduct"
+                title="{mHeader>ProductId} - {mHeader>Name}"
+                number="{mHeader>Quantity}"/>
+	        </List>
+</core:FragmentDefinition>
