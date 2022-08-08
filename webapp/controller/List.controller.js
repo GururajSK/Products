@@ -29,7 +29,7 @@ sap.ui.define([
                     ProductId: oSelectedData.ProductId
                 }); 
             },
-
+            //Function for next button, used to navigate to detail page
             onpressNext: function(){
                 var router = this.getOwnerComponent().getRouter();
                 router.navTo("RouteDetail",{
